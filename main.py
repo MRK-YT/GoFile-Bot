@@ -21,7 +21,7 @@ Bot = Client(
 @Bot.on_message(filters.private & filters.command("start"))
 async def start(bot, update):
     await update.reply_text(
-        text=f"Hello {update.from_user.mention}, Please send a media for gofile.io stream link.\n\nMade by @Mo_Tech_YT",
+        text=f"Hello {update.from_user.mention},  I Can Generate Telegram File To Streaming Link And Direct Download Link.\n\nMade By @hb4all\n For More @HB4All_Bot",
         disable_web_page_preview=True,
         quote=True
     )
@@ -57,17 +57,14 @@ async def media_filter(bot, update):
         )
         return
     text = f"**File Name:** `{response['fileName']}`" + "\n"
-    text += f"**Download Page:** `{response['downloadPage']}`" + "\n"
-    text += f"**Direct Download Link:** `{response['directLink']}`" + "\n"
-    text += f"**Info:** `{response['info']}`"
     reply_markup = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="Open Link", url=response['directLink']),
-                InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url={response['directLink']}")
+                InlineKeyboardButton(text="Watch", url=response['downloadPage']),
+                InlineKeyboardButton(text="Download", url=response['directLink'])
             ],
             [
-                InlineKeyboardButton(text="💫Deploy Video💫", url="https://youtu.be/Zisu87a_6J8")
+                InlineKeyboardButton(text="💥HB4All💥", url="https://t.me/HB4All")
             ]
         ]
     )
